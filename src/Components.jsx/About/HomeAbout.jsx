@@ -38,7 +38,7 @@ export const HomeAbout = () => {
     once: false,
     margin: "-10%",
   });
-
+ const currentYear = new Date().getFullYear();
 
 
   // console.log("isMobile:", isMobile);
@@ -182,7 +182,7 @@ export const HomeAbout = () => {
           <FaHeartbeat className='dark:text-teal-500 text-teal-800 absolute -top-4 text-3xl' />
         </motion.div>
         <footer className="pt-10 pb-2 border-t border-gray-800 text-center text-sm dark:text-gray-300 text-black">
-          <p className='text-xs mt-8 '>© Adebayo. All rights reserved. <br className='block md:hidden' /> <span className="dark:text-teal-500 text-teal-800">Crafted with passion.</span></p>
+          <p className='text-xs mt-8'>©  {currentYear} Adebayo. All rights reserved. <br className='block md:hidden' /> <span className="dark:text-teal-500 text-teal-800">Crafted with passion.</span></p>
         </footer>
       </motion.div>
     </section>

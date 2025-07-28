@@ -23,15 +23,13 @@ export const HeroContact = () => {
 
     const inViewContact = useInView(ContactRef, { once: false, margin: '-10%' });
     const inViewfoot = useInView(footRef, { once: false, margin: '-10%' });
-    const inViewChain = useInView(chainRef, { once: false, margin: '-20%' });
-    const inViewBlock = useInView(blockRef, { once: false, margin: '-20%' });
 
     const headerRef = useRef(null);
     const isHeaderInView = useInView(headerRef, {
         once: false, // set false so it re-triggers when scrolling back
         margin: "-10%", // optional tuning
     });
-
+ const currentYear = new Date().getFullYear();
     return (
 
         <div className=" dark:text-white text-black p-5 pt-0 min-h-screen font-poppins">
@@ -139,7 +137,7 @@ export const HeroContact = () => {
                         <FaHeartbeat className='dark:text-teal-500 text-teal-800 absolute -top-4 text-3xl' />
                     </motion.div>
                     <footer className="pt-10 pb-2 border-t border-gray-800 text-center text-sm dark:text-gray-300 text-black">
-                        <p className='text-xs mt-8 '>© Adebayo. All rights reserved. <br className='block md:hidden' /> <span className="dark:text-teal-500 text-teal-800">Crafted with passion.</span></p>
+                         <p className='text-xs mt-8'>©  {currentYear} Adebayo. All rights reserved. <br className='block md:hidden' /> <span className="dark:text-teal-500 text-teal-800">Crafted with passion.</span></p>
                     </footer>
             </div>
 
